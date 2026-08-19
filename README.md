@@ -10,3 +10,10 @@ eine Browser-Adressleiste und wirkt nicht wie eine App.
 
 Die Startseite leitet deshalb einfach auf das eigentliche Projekt weiter:
 https://fermasster0-rgb.github.io/wild-spot/
+
+## Warum die Datei .nojekyll hier liegt
+
+GitHub Pages schickt jede Seite durch Jekyll, und Jekyll überspringt alles, was
+mit einem Punkt beginnt — also ausgerechnet `.well-known/`. Die Asset-Links-Datei
+war dadurch nicht abrufbar (404), obwohl sie im Repo lag. Die leere Datei
+`.nojekyll` schaltet Jekyll ab; seitdem wird der Ordner ausgeliefert.
